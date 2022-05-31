@@ -11286,3 +11286,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+body {
+  background-color: rgb(32, 32, 32);
+  color: rgb(255, 255, 255) !important;
+}
+
+td {
+  color: white !important;
+}
+
+.navbar {
+  font-size: 25px !important;
+  border-bottom: 3px solid white !important;
+  color: white !important;
+}
+.navbar a {
+  color: white !important;
+  font-size: 25px !important;
+  text-decoration: none !important;
+}

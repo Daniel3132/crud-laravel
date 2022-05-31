@@ -26,8 +26,8 @@ Route::get('empleado/create', [EmpleadoController::class,'create']);
 //->middlewares auth para que respete la autenticacion
 Route::resource('empleado',EmpleadoController::class)->middleware('auth');
 //se ponen como false los que no queremos que aparezcan
-Auth::routes(['register'=>false,'reset'=>false]);
-
+//Auth::routes(['register'=>false,'reset'=>false]);
+Auth::routes(['reset'=>false]);
 Route::get('/home', [EmpleadoController::class, 'index'])->name('home');
 //ir directamente a index
 Route::group(['middleware'=>'auth'], function(){

@@ -9,11 +9,10 @@
   {{ Session::get('mensaje') }}
 </div>
 @endif
-
-
 <a href="{{ url('empleado/create') }}" class="btn btn-success">Registrar nuevo empleado</a>
 <br><br>
-<table class="table table-striped table-inverse table-responsive">
+
+<table class="table table-striped table-inverse table-responsive text-white">
     <thead class="thead-inverse">
         <tr>
             <th>#</th>
@@ -25,7 +24,7 @@
             <th>Acciones</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody >
             @foreach($empleados as $empleado)
             <tr>
                 <td scope="row">{{$empleado->id}}</td>
@@ -33,7 +32,7 @@
                 <img width='70' src="{{ asset('storage').'/'.$empleado->Foto }}" alt="">    
             </td>
 
-                <td>{{$empleado->Nombre}}</td>
+                <td class="text-white">{{$empleado->Nombre}}</td>
                 <td>{{$empleado->ApellidoP}}</td>
                 <td>{{$empleado->ApellidoM}}</td>
                 <td>{{$empleado->Correo}}</td>
@@ -52,6 +51,7 @@
             @endforeach
         </tbody>
 </table>
+
 {!! $empleados->links() !!}
 </div>
 @endsection
