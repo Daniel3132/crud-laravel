@@ -2,15 +2,13 @@
 
 @section('content')
 <link rel="stylesheet" href="{{ url('/js/app.js') }}">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js" integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 
 <div class="container">
 
     @if (Session::has('mensaje'))
     <div class="alert alert-success alert-dismissible " role="alert">
         {{ Session::get('mensaje') }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
     </div>
     @endif
@@ -53,12 +51,12 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <h3 class="modal-title" id="exampleModalLabel">Borrar Empleado </h3>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <h4>¿Seguro desea borrarlo?</h4>
+                                <h4>¿Seguro desea borrar a {{$empleado -> Nombre}} {{$empleado -> ApellidoP}} </h4>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
